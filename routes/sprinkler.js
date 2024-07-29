@@ -10,14 +10,15 @@ const path = require("path");
 
 // Send Email
 const sendEmail = require("../emailsend/sendemail");
-router.post("/paymentintent", async (req, res) => {
-  let cost = 20;
+router.get("/paymentintent", async (req, res) => {
+  const amount = 2000;
   const paymentIntent = await stripe.paymentIntents.create({
-    cost,
+    amount,
     currency: "usd",
   });
   res.send({
     clientSecret: paymentIntent.client_secret,
+    // clientSecret: "paymentIntent.client_secret",
   });
 });
 
