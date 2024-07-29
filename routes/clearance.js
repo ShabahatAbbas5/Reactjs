@@ -11,7 +11,7 @@ const sendEmail = require("../emailsend/sendemail");
 router.get("/", async (req, res) => {
 
 // router.post("/", async (req, res) => {
-  res.status(200).send({ success: "Connected" });
+  res.status(200).send({ success: "Connected Successfully" });
 
   const { amount, formData, buildingType } = req.body;
 
