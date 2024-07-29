@@ -37,9 +37,9 @@ router.post('/', upload.single('plotPlan'), async (req, res) => {
     // Save form data and file path to the database
     const invoiceNumber = Date.now();
 
-    // Generate PDF
-    const pdfPath = path.join(__dirname, '../invoices/' + invoiceNumber + '.pdf');
-    await createPDF(formData, invoiceNumber, pdfPath,plotPlanUrl);
+    // // Generate PDF
+    // const pdfPath = path.join(__dirname, '../invoices/' + invoiceNumber + '.pdf');
+    // await createPDF(formData, invoiceNumber, pdfPath,plotPlanUrl);
 
     // Send email
     try {
