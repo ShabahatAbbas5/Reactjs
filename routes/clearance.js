@@ -8,10 +8,10 @@ const path = require("path");
 
 // Send Email
 const sendEmail = require("../emailsend/sendemail");
-router.get("/", async (req, res) => {
+// router.get("/", async (req, res) => {
+// res.status(200).send({ success: "Connected Successfully" });
+router.post("/", async (req, res) => {
 
-// router.post("/", async (req, res) => {
-  res.status(200).send({ success: "Connected Successfully" });
 
   const { amount, formData, buildingType } = req.body;
 
