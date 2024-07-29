@@ -33,7 +33,7 @@ router.post("/", async (req, res) => {
     const invoiceNumber = Date.now();
 
     // // Generate PDF
-    // const pdfPath = path.join(__dirname, '../invoices/'+invoiceNumber+'.pdf');
+    const pdfPath = path.join(__dirname, '../invoices/'+invoiceNumber+'.pdf');
     // await createPDF(formData, invoiceNumber, pdfPath);
 
     // Send email
